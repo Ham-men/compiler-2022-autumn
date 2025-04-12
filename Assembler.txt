@@ -1,0 +1,32 @@
+.386
+.model flat, stdcall
+include c : \masm32\include\msvcrt.inc
+include c : \masm32\include\kernel32.inc\nincludelib c: \masm32\lib\msvcrt.lib
+includelib c : \masm32\lib\kernel32.lib
+.DATA
+fmt db "%d",10,0
+x dd ?
+z dd ?
+y db ?
+.CODE
+mov y, ”www”
+mov x, 5
+for1:
+mov eax, x
+cmp eax, 10
+jg endfor1
+mov y, 3
+mov ebx, x
+mov eax, 8
+sub eax, ebx
+mov z, eax
+mov eax, ’zasd’
+push eax
+push offset fmt
+call crt_printf
+sub esp, 8
+mov eax, x
+add eax, 1
+mov x, eax
+jmp for1
+endfor1:

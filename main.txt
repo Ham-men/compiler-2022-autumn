@@ -1,0 +1,13 @@
+PROGRAMM; //some text
+integer x; 
+435integer z;
+string y; //some text
+y = ”www”;
+for (x = 5:10 by 1)
+z = 5+length(y) - x;
+write(’zasd’,z); 
+endfor;
+FUNC length(integer s); 
+return 3;
+ENDF;
+END;

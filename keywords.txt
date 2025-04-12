@@ -1,0 +1,11 @@
+PROGRAMM
+integer
+string
+for
+endfor
+by
+write
+END
+FUNC
+ENDF
+return
